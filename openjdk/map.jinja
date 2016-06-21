@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+# vim: ft=jinja
+
+{## Start with  defaults from defaults.sls ##}
+{% import_yaml 'openjdk/defaults.yaml' as default_settings %}
+
+{## Merge in template:lookup pillar ##}
+{% set openjdk = salt['pillar.get'](
+        'openjdk',
+        default=default_settings.openjdk,
+        merge=True
+    )
+%}

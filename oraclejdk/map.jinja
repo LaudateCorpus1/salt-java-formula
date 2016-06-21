@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+# vim: ft=jinja
+
+{## Start with  defaults from defaults.sls ##}
+{% import_yaml 'oraclejdk/defaults.yaml' as default_settings %}
+
+{## Merge in template:lookup pillar ##}
+{% set oraclejdk = salt['pillar.get'](
+        'oraclejdk',
+        default=default_settings.oraclejdk,
+        merge=True
+    )
+%}

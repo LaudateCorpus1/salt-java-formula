@@ -1,0 +1,5 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+oraclejdk:
+  version: 8
+  jce_install: true

@@ -1,0 +1,8 @@
+oraclejdk:
+  version: 8
+  jce_install: true
+
+openjdk:
+  version: 8
+  jre_only: true
+  headless: true
