@@ -11,7 +11,7 @@
     {% else %}
       {% set packagename = "openjdk-" + openjdk['version'] + "-jre" %}
     {% endif %}
-  {% elif openjdk['jre_only'] == 'false' || openjdk['jre_only'] is not defined %}
+  {% elif openjdk['jre_only'] == 'false' or openjdk['jre_only'] is not defined %}
     {% if openjdk['headless'] == 'true' %}
       {% set packagename = "openjdk-" + openjdk['version'] + "-jdk-headless" %}
     {% else %}
