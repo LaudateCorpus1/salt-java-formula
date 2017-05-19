@@ -21,8 +21,7 @@ oracle-java{{ oraclejdk.version }}-debconf:
 oracle-java{{ oraclejdk.version }}-repo:
   pkgrepo.managed:
     - humanname: WebUp8Team Java Repository
-    - name: "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main"
-    - dist: trusty
+    - ppa: webupd8team/java
     - file: /etc/apt/sources.list.d/webup8team.list
     - keyid: EEA14886
     - keyserver: keyserver.ubuntu.com
@@ -48,3 +47,4 @@ oracle-java{{ oraclejdk.version }}-unlimited-jce-policy:
       - pkgrepo: oracle-java{{ oraclejdk.version }}-repo
       - pkg: oracle-java{{ oraclejdk.version }}-installer
 {%- endif %}
+
